@@ -17,11 +17,12 @@ pipeline {
             }
         }
 
-        stage("Get Globis source code from GIT") {
+        stage("Get source code ") {
             steps{
                 script{
-                    echo "Cloning the repository from ${repo} on branch ${branch}..."
-                    git branch: "${branch}", url: "${repo}"
+                        echo "Cloning the repository from ${repo} on branch ${branch}..."
+                        git branch: "${branch}", url: "${repo}"
+                        echo "succesfull"
                 }
             }
         }
