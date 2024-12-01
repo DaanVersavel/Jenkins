@@ -20,10 +20,8 @@ pipeline {
         stage("Get Globis source code from GIT") {
             steps{
                 script{
-                  steps {
-                        echo "Cloning the repository from ${repo} on branch ${branch}..."
-                        git branch: "${branch}", url: "${repo}"
-                    }
+                    echo "Cloning the repository from ${repo} on branch ${branch}..."
+                    git branch: "${branch}", url: "${repo}"
                 }
             }
         }
